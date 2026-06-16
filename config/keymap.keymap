@@ -1,44 +1,27 @@
 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
-
-        layer_0 {
-            bindings =<
-                &none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
+        default_layer {
+            bindings = <
+                &kp ESC   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+                &kp TAB   &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K &kp L &kp SEMI &kp QUOT
+                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                &mo 1     &kp LCTRL &kp LALT &kp LGUI &kp SPACE &mo 2     &kp RET &kp RGUI &kp RALT &kp RCTRL &mo 3
             >;
         };
 
-        layer_1 {
-            bindings =<
-                &none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-        layer_2 {
-            bindings =<
-                &none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-            >;
-        };
-
-        layer_3 {
-            bindings =<
-                &none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none
+        /* レイヤー例（必要に応じて後で調整） */
+        lower_layer {
+            bindings = <
+                &kp GRAVE &kp 1 &kp 2 &kp 3 &kp 4 &kp 5     &kp 6 &kp 7 &kp 8 &kp 9 &kp 0 &kp DEL
+                &kp TAB   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+                &kp LSHFT &kp F12 &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp RSHFT
+                &trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };
